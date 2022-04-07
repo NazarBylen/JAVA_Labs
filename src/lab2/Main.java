@@ -1,6 +1,7 @@
 package lab2;
-import java.util.ArrayList;
-import java.util.Collections;
+import lab2.appliances.computer;
+import lab2.appliances.microwave;
+import lab2.appliances.microwaveUpdated;
 
 
 public class Main {
