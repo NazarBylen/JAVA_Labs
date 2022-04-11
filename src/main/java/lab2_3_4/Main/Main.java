@@ -1,7 +1,7 @@
-package lab2_3_4;
+package lab2_3_4.Main;
 import lab2_3_4.appliances.computer;
-import lab2_3_4.appliances.microwave;
 import lab2_3_4.appliances.microwaveUpdated;
+import lab2_3_4.appliances.microwave;
 
 
 public class Main {
