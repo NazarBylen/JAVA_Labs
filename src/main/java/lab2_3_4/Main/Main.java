@@ -1,15 +1,15 @@
 package lab2_3_4.Main;
-import lab2_3_4.appliances.computer;
-import lab2_3_4.appliances.microwaveUpdated;
-import lab2_3_4.appliances.microwave;
+import lab2_3_4.appliances.Computer;
+import lab2_3_4.appliances.MicrowaveUpdated;
+import lab2_3_4.appliances.Microwave;
 
 
 public class Main {
     public static void main(String[] args) {
         int power = 0;
-        microwave mic = new microwave(power);
-        microwaveUpdated mic2 = new microwaveUpdated(power);
-        computer com = new computer(power);
+        Microwave mic = new Microwave(power);
+        MicrowaveUpdated mic2 = new MicrowaveUpdated(power);
+        Computer com = new Computer(power);
 
         System.out.println(mic.powerCount());
         System.out.println(mic2.powerCount());

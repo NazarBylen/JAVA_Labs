@@ -1,6 +1,6 @@
 package lab2_3_4.appliances;
 
-public class microwaveUpdated extends microwave {
+public class MicrowaveUpdated extends Microwave {
 
     public int power;
     public int volt = 50;
@@ -9,7 +9,16 @@ public class microwaveUpdated extends microwave {
     public int battery = 50;
     public String device = "microwaveUpdated";
 
-    public microwaveUpdated(int power) {
+    public MicrowaveUpdated(){
+        super(0);
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
+
+    public MicrowaveUpdated(int power) {
         super(power);
     }
 

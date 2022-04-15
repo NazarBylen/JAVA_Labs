@@ -8,6 +8,15 @@ public abstract class Appliances {
     public int battery;
     public String device;
 
+    public Appliances(int power){
+        this.power=power;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
+
     public abstract int powerCount();
     public abstract String isPluggedIn();
 

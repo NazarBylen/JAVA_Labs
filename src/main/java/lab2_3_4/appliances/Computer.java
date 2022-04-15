@@ -1,6 +1,6 @@
 package lab2_3_4.appliances;
 
-public class computer extends Appliances {
+public class Computer extends Appliances {
 
     public int power;
     public int volt = 40;
@@ -9,8 +9,14 @@ public class computer extends Appliances {
     public int battery = 20;
     public String device = "computer";
 
-    public computer(int power){
-        this.power=power;
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
+
+    public Computer(int power){
+        super(0);
     }
 
     public int powerCount(){
