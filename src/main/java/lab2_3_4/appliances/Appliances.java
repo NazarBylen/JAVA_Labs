@@ -20,9 +20,7 @@ public abstract class Appliances {
     public abstract int powerCount();
     public abstract String isPluggedIn();
 
-    public int getYear() {
-        return year;
-    }
+    public abstract int getYear();
 }
 
 

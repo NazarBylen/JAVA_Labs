@@ -9,17 +9,13 @@ public class MicrowaveUpdated extends Microwave {
     public int battery = 50;
     public String device = "microwaveUpdated";
 
-    public MicrowaveUpdated(){
+    public MicrowaveUpdated(int power){
         super(0);
     }
 
     @Override
     public String toString() {
         return this.getClass().getSimpleName();
-    }
-
-    public MicrowaveUpdated(int power) {
-        super(power);
     }
 
     public int powerCount() {
