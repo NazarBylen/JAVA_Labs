@@ -7,11 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppliancesTest {
 
     @Test
-    void testToString() {
-        assertEquals("Appliances", "Appliances");
-    }
-
-    @Test
     void powerCount() {
         assertEquals(0, 0);
     }

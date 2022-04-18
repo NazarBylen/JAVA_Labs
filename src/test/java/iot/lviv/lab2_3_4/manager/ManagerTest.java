@@ -28,8 +28,6 @@ class ManagerTest {
         assertEquals(m, ar.get(0).powerCount());
         assertEquals(c, ar.get(1).powerCount());
         assertEquals(m2, ar.get(2).powerCount());
-        System.out.println(ar);
-        System.out.println(ar2);
     }
 
     @Test
