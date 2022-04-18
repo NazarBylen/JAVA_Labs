@@ -1,9 +1,9 @@
-package lab2_3_4.manager;
+package iot.lviv.lab2_3_4.manager;
 
-import lab2_3_4.appliances.Appliances;
-import lab2_3_4.appliances.Computer;
-import lab2_3_4.appliances.Microwave;
-import lab2_3_4.appliances.MicrowaveUpdated;
+import iot.lviv.lab2_3_4.appliances.Computer;
+import iot.lviv.lab2_3_4.appliances.Appliances;
+import iot.lviv.lab2_3_4.appliances.Microwave;
+import iot.lviv.lab2_3_4.appliances.MicrowaveUpdated;
 
 import java.util.ArrayList;
 import java.util.Comparator;

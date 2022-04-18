@@ -1,4 +1,4 @@
-package lab2_3_4.appliances;
+package iot.lviv.lab2_3_4.appliances;
 
 public abstract class Appliances {
     public int power;
@@ -10,11 +10,6 @@ public abstract class Appliances {
 
     public Appliances(int power){
         this.power=power;
-    }
-
-    @Override
-    public String toString() {
-        return this.getClass().getSimpleName();
     }
 
     public abstract int powerCount();

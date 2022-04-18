@@ -1,4 +1,4 @@
-package lab2_3_4.appliances;
+package iot.lviv.lab2_3_4.appliances;
 
 import org.junit.jupiter.api.Test;
 

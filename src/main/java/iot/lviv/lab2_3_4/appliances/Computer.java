@@ -1,4 +1,4 @@
-package lab2_3_4.appliances;
+package iot.lviv.lab2_3_4.appliances;
 
 public class Computer extends Appliances {
 
@@ -9,11 +9,6 @@ public class Computer extends Appliances {
     public int battery = 20;
     public String device = "computer";
 
-
-    @Override
-    public String toString() {
-        return this.getClass().getSimpleName();
-    }
 
     public Computer(int power){
         super(0);

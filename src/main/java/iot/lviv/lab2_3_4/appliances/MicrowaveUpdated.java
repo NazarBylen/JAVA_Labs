@@ -1,4 +1,4 @@
-package lab2_3_4.appliances;
+package iot.lviv.lab2_3_4.appliances;
 
 public class MicrowaveUpdated extends Microwave {
 
@@ -11,11 +11,6 @@ public class MicrowaveUpdated extends Microwave {
 
     public MicrowaveUpdated(int power){
         super(0);
-    }
-
-    @Override
-    public String toString() {
-        return this.getClass().getSimpleName();
     }
 
     public int powerCount() {
