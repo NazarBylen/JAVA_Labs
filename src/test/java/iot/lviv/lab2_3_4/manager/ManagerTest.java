@@ -18,37 +18,41 @@ class ManagerTest {
     List<Appliances> ar3 = man.sortingByYear(man.getList());
     List<Appliances> ar4 = man.sortingByYearReversed(man.getList());
 
-    int c = 1200;
-    int m = 400;
-    int m2 = 2500;
+    int cpower = 1200;
+    int mpower = 400;
+    int m2power = 2500;
+
+    int cyear = 2015;
+    int myear = 2000;
+    int m2year = 1995;
 
 
     @Test
     void sortingByPower() {
-        assertEquals(m, ar.get(0).powerCount());
-        assertEquals(c, ar.get(1).powerCount());
-        assertEquals(m2, ar.get(2).powerCount());
+        assertEquals(mpower, ar.get(0).powerCount());
+        assertEquals(cpower, ar.get(1).powerCount());
+        assertEquals(m2power, ar.get(2).powerCount());
     }
 
     @Test
     void sortingByPowerReversed() {
-        assertEquals(m2, ar2.get(0).powerCount());
-        assertEquals(c, ar2.get(1).powerCount());
-        assertEquals(m, ar2.get(2).powerCount());
+        assertEquals(m2power, ar2.get(0).powerCount());
+        assertEquals(cpower, ar2.get(1).powerCount());
+        assertEquals(mpower, ar2.get(2).powerCount());
     }
 
     @Test
     void sortingByYear() {
-        assertEquals(m2, ar3.get(0).powerCount());
-        assertEquals(m, ar3.get(1).powerCount());
-        assertEquals(c, ar3.get(2).powerCount());
+        assertEquals(m2year, ar3.get(0).getYear());
+        assertEquals(myear, ar3.get(1).getYear());
+        assertEquals(cyear, ar3.get(2).getYear());
     }
 
     @Test
     void sortingByYearReversed() {
-        assertEquals(c, ar4.get(0).powerCount());
-        assertEquals(m, ar4.get(1).powerCount());
-        assertEquals(m2, ar4.get(2).powerCount());
+        assertEquals(cyear, ar4.get(0).getYear());
+        assertEquals(myear, ar4.get(1).getYear());
+        assertEquals(m2year, ar4.get(2).getYear());
     }
 
 }
