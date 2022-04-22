@@ -27,8 +27,4 @@ class computerTest {
         assertEquals("power,volt,amp,year,battery,device", com.getHeaders());
     }
 
-    @Test
-    void getName() {
-        assertEquals("iot.lviv.lab2_3_4.appliances.Computer", com.getName());
-    }
 }

@@ -28,8 +28,4 @@ class microwaveTest {
         assertEquals("power,volt,amp,year,battery,device", mic.getHeaders());
     }
 
-    @Test
-    void getName() {
-        assertEquals("iot.lviv.lab2_3_4.appliances.Microwave", mic.getName());
-    }
 }

@@ -1,5 +1,7 @@
 package iot.lviv.lab2_3_4.appliances;
 
+import lombok.Getter;
+
 public class Computer extends Appliances {
 
     public int power;

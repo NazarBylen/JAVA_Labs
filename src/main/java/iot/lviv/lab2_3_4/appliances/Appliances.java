@@ -1,5 +1,7 @@
 package iot.lviv.lab2_3_4.appliances;
 
+import lombok.Getter;
+
 public abstract class Appliances {
     public int power;
     public int volt;
