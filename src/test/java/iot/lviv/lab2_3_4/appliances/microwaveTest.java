@@ -18,4 +18,18 @@ class microwaveTest {
         assertEquals("microwave has been plugged in)", mic.isPluggedIn());
     }
 
+    @Test
+    void toCSV() {
+        assertEquals("0,0,0,0,0,microwave", mic.toCSV());
+    }
+
+    @Test
+    void getHeaders() {
+        assertEquals("power,volt,amp,year,battery,device", mic.getHeaders());
+    }
+
+    @Test
+    void getName() {
+        assertEquals("iot.lviv.lab2_3_4.appliances.Microwave", mic.getName());
+    }
 }

@@ -15,4 +15,14 @@ class AppliancesTest {
     void isPluggedIn() {
         assertEquals("", "");
     }
+
+    @Test
+    void toCSV() {
+        assertEquals("", "");
+    }
+
+    @Test
+    void getHeaders() {
+        assertEquals("", "");
+    }
 }

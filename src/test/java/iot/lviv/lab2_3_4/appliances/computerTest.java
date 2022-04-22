@@ -17,4 +17,18 @@ class computerTest {
         assertEquals("computer has been plugged in)", com.isPluggedIn());
     }
 
+    @Test
+    void toCSV() {
+        assertEquals("0,0,0,0,0,computer", com.toCSV());
+    }
+
+    @Test
+    void getHeaders() {
+        assertEquals("power,volt,amp,year,battery,device", com.getHeaders());
+    }
+
+    @Test
+    void getName() {
+        assertEquals("iot.lviv.lab2_3_4.appliances.Computer", com.getName());
+    }
 }

@@ -10,20 +10,36 @@ public class Computer extends Appliances {
     public String device = "computer";
 
 
-    public Computer(int power){
+    public Computer(int power) {
         super(0);
     }
 
-    public int powerCount(){
-        int power=volt*amp;
+    public int powerCount() {
+        int power = volt * amp;
         return power;
     }
 
-    public String isPluggedIn(){
+    public String isPluggedIn() {
         return device + " has been plugged in)";
     }
 
     public int getYear() {
         return year;
     }
+
+    public String getName() {
+        return getClass().getName();
+    }
+
+    public String getHeaders() {
+        return super.getHeaders() + "," + "device";
+    }
+
+    ;
+
+    public String toCSV() {
+        return super.toCSV() + "," + device;
+    }
+
+    ;
 }

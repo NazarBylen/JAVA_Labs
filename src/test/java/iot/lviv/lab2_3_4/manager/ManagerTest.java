@@ -1,8 +1,6 @@
 package iot.lviv.lab2_3_4.manager;
+
 import iot.lviv.lab2_3_4.appliances.Appliances;
-import iot.lviv.lab2_3_4.appliances.Computer;
-import iot.lviv.lab2_3_4.appliances.Microwave;
-import iot.lviv.lab2_3_4.appliances.MicrowaveUpdated;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -10,13 +8,15 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ManagerTest {
-    int power=0;
+    int power = 0;
     Manager man = new Manager();
-
     List<Appliances> ar = man.sortingByPower(man.getList());
     List<Appliances> ar2 = man.sortingByPowerReversed(man.getList());
     List<Appliances> ar3 = man.sortingByYear(man.getList());
     List<Appliances> ar4 = man.sortingByYearReversed(man.getList());
+    List<Appliances> listTest = man.sortingByYearReversed(man.getList());
+    List<Appliances> listTest2 = man.sortingByYearReversed(man.getList2());
+    List<Appliances> listTest3 = man.sortingByYearReversed(man.getList3());
 
     int cpower = 1200;
     int mpower = 400;
@@ -25,6 +25,10 @@ class ManagerTest {
     int cyear = 2015;
     int myear = 2000;
     int m2year = 1995;
+
+    String computerName = "Computer";
+    String microwaveName = "Microwave";
+    String microwaveUpdatedName = "MicrowaveUpdated";
 
 
     @Test
@@ -54,5 +58,20 @@ class ManagerTest {
         assertEquals(myear, ar4.get(1).getYear());
         assertEquals(m2year, ar4.get(2).getYear());
     }
+    @Test
+    void getList() {
+        assertEquals(computerName, listTest.get(0).getClass().getSimpleName());
+        assertEquals(microwaveName, ar4.get(1).getClass().getSimpleName());
+        assertEquals(microwaveUpdatedName, ar4.get(2).getClass().getSimpleName());
+    }
 
+    @Test
+    void getList2() {
+        assertEquals(computerName, listTest.get(0).getClass().getSimpleName());
+    }
+
+    @Test
+    void getList3() {
+        assertEquals("", "");
+    }
 }

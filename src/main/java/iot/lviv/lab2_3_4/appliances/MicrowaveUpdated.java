@@ -25,4 +25,15 @@ public class MicrowaveUpdated extends Microwave {
     public String isPluggedIn() {
         return device + " has been plugged in)";
     }
+
+    public String getName() {
+        return getClass().getName();
+    }
+
+    public String getHeaders(){
+        return super.getHeaders() + "," +"device";
+    };
+    public String toCSV(){
+        return super.toCSV() + "," + device;
+    };
 }

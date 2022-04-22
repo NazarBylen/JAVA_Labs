@@ -9,7 +9,7 @@ public class Microwave extends Appliances {
     public int battery = 50;
     public String device = "microwave";
 
-    public Microwave(int power){
+    public Microwave(int power) {
         super(0);
     }
 
@@ -25,5 +25,21 @@ public class Microwave extends Appliances {
     public String isPluggedIn() {
         return device + " has been plugged in)";
     }
+
+    public String getName() {
+        return getClass().getName();
+    }
+
+    public String getHeaders() {
+        return super.getHeaders() + "," + "device";
+    }
+
+    ;
+
+    public String toCSV() {
+        return super.toCSV() + "," + device;
+    }
+
+    ;
 
 }

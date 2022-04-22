@@ -14,11 +14,22 @@ public class Manager {
 
     private ArrayList<Appliances> arrayList;
 
-    public List<Appliances> getList(){
+    public List<Appliances> getList() {
         arrayList = new ArrayList<Appliances>();
         arrayList.add(new Computer(0));
         arrayList.add(new Microwave(0));
         arrayList.add(new MicrowaveUpdated(0));
+        return arrayList;
+    }
+
+    public List<Appliances> getList2() {
+        arrayList = new ArrayList<Appliances>();
+        arrayList.add(new Computer(0));
+        return arrayList;
+    }
+
+    public List<Appliances> getList3() {
+        arrayList = new ArrayList<Appliances>();
         return arrayList;
     }
 
