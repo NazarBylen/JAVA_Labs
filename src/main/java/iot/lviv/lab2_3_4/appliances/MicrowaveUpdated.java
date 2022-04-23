@@ -1,10 +1,13 @@
 package iot.lviv.lab2_3_4.appliances;
 
+import lombok.Getter;
+
 public class MicrowaveUpdated extends Microwave {
 
     public int power;
     public int volt = 50;
     public int amp = 50;
+    @Getter
     public int year = 1995;
     public int battery = 50;
     public String device = "microwaveUpdated";

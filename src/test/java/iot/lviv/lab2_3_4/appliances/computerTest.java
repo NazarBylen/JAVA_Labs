@@ -12,19 +12,4 @@ class computerTest {
         assertEquals(1200, com.powerCount());
     }
 
-    @Test
-    void isPluggedIn() {
-        assertEquals("computer has been plugged in)", com.isPluggedIn());
-    }
-
-    @Test
-    void toCSV() {
-        assertEquals("0,0,0,0,0,computer", com.toCSV());
-    }
-
-    @Test
-    void getHeaders() {
-        assertEquals("power,volt,amp,year,battery,device", com.getHeaders());
-    }
-
 }

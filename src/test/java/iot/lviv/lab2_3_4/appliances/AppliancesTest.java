@@ -16,13 +16,4 @@ class AppliancesTest {
         assertEquals("", "");
     }
 
-    @Test
-    void toCSV() {
-        assertEquals("", "");
-    }
-
-    @Test
-    void getHeaders() {
-        assertEquals("", "");
-    }
 }

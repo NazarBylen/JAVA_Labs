@@ -12,19 +12,4 @@ class microwaveUpdatedTest {
         assertEquals(2500, micUp.powerCount());
     }
 
-    @Test
-    void isPluggedIn() {
-        assertEquals("microwaveUpdated has been plugged in)", micUp.isPluggedIn());
-    }
-
-    @Test
-    void toCSV() {
-        assertEquals("0,0,0,0,0,microwave,microwaveUpdated", micUp.toCSV());
-    }
-
-    @Test
-    void getHeaders() {
-        assertEquals("power,volt,amp,year,battery,device,device", micUp.getHeaders());
-    }
-
 }

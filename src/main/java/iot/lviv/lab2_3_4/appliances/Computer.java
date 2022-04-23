@@ -7,6 +7,7 @@ public class Computer extends Appliances {
     public int power;
     public int volt = 40;
     public int amp = 30;
+    @Getter
     public int year = 2015;
     public int battery = 20;
     public String device = "computer";
