@@ -16,18 +16,19 @@ import static org.junit.Assert.assertTrue;
 
 class AppliancesWriterTest {
     AppliancesWriter wr = new AppliancesWriter();
+    public static String sep = File.separator;
 
     Manager man = new Manager();
     List<Appliances> appliances = man.getList();
     List<Appliances> appliances2 = man.getList2();
     List<Appliances> appliances3 = man.getList3();
-    Path path = Paths.get("D:\\projects\\java_labs\\src\\test\\resources\\expected.csv");
-    Path path2 = Path.of("D:\\projects\\java_labs\\result.csv");
+    Path path = Paths.get("src" + sep + "test" + sep + "resources" + sep + "expected.csv");
+    Path path2 = Path.of("result.csv");
 
-    Path path3 = Paths.get("D:\\projects\\java_labs\\src\\test\\resources\\expected2.csv");
-    Path path4 = Path.of("D:\\projects\\java_labs\\result2.csv");
-    Path path5 = Paths.get("D:\\projects\\java_labs\\src\\test\\resources\\expected3.csv");
-    Path path6 = Path.of("D:\\projects\\java_labs\\result3.csv");
+    Path path3 = Paths.get("src" + sep + "test" + sep + "resources" + sep + "expected2.csv");
+    Path path4 = Path.of("result2.csv");
+    Path path5 = Paths.get("src" + sep + "test" + sep + "resources" + sep + "expected3.csv");
+    Path path6 = Path.of("result3.csv");
 
 
     @Test
