@@ -1,0 +1,6 @@
+power,volt,amp,year,battery,device
+0,0,0,0,20,computer
+power,volt,amp,year,battery,device
+0,0,0,0,50,microwave
+power,volt,amp,year,battery,device,device
+0,0,0,0,50,microwave,50,microwaveUpdated
