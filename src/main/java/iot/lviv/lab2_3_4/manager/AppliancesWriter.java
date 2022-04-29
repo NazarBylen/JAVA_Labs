@@ -27,41 +27,4 @@ public class AppliancesWriter {
             }
         }
     }
-
-    public static void writeToFile2(List<Appliances> appliances) throws IOException {
-        try (FileWriter writer = new FileWriter("result2.csv")) {
-            appliances.stream().sorted(Comparator.comparing(Appliances::getName)).collect(Collectors.toList());
-
-            String previousClassName = "";
-
-            for (var app : appliances) {
-                if (!app.getClass().getSimpleName().equals(previousClassName)) {
-                    writer.write(app.getHeaders());
-                    writer.write("\r\n");
-                    writer.write(app.toCSV());
-                    writer.write("\r\n");
-                    previousClassName = app.getClass().getSimpleName();
-                }
-            }
-        }
-    }
-
-    public static void writeToFile3(List<Appliances> appliances) throws IOException {
-        try (FileWriter writer = new FileWriter("result3.csv")) {
-            appliances.stream().sorted(Comparator.comparing(Appliances::getName)).collect(Collectors.toList());
-
-            String previousClassName = "";
-
-            for (var app : appliances) {
-                if (!app.getClass().getSimpleName().equals(previousClassName)) {
-                    writer.write(app.getHeaders());
-                    writer.write("\r\n");
-                    writer.write(app.toCSV());
-                    writer.write("\r\n");
-                    previousClassName = app.getClass().getSimpleName();
-                }
-            }
-        }
-
-    }
 }
