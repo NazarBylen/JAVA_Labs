@@ -25,6 +25,10 @@ public class MicrowaveUpdated extends Microwave {
         return year;
     }
 
+    public int getVolt() {
+        return volt;
+    }
+
     public String isPluggedIn() {
         return device + " has been plugged in)";
     }
@@ -37,6 +41,6 @@ public class MicrowaveUpdated extends Microwave {
         return super.getHeaders() + "," +"device";
     };
     public String toCSV(){
-        return super.toCSV() + "," + device;
+        return super.toCSV() + "," + battery+ "," + device;
     };
 }

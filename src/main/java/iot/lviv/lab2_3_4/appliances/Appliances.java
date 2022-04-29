@@ -29,7 +29,7 @@ public abstract class Appliances {
     ;
 
     public String toCSV() {
-        return power + "," + volt + "," + amp + "," + year + "," + battery;
+        return power + "," + volt + "," + amp + "," + year;
     }
 
     ;

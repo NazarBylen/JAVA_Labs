@@ -21,6 +21,10 @@ public class Microwave extends Appliances {
         return power;
     }
 
+    public int getVolt() {
+        return volt;
+    }
+
     public int getYear() {
         return year;
     }
@@ -40,7 +44,7 @@ public class Microwave extends Appliances {
     ;
 
     public String toCSV() {
-        return super.toCSV() + "," + device;
+        return super.toCSV() + "," + battery+ "," + device;
     }
 
     ;

@@ -22,6 +22,10 @@ public class Computer extends Appliances {
         return power;
     }
 
+    public int getVolt() {
+        return volt;
+    }
+
     public String isPluggedIn() {
         return device + " has been plugged in)";
     }
@@ -41,7 +45,7 @@ public class Computer extends Appliances {
     ;
 
     public String toCSV() {
-        return super.toCSV() + "," + device;
+        return super.toCSV() + "," + battery+ "," + device;
     }
 
     ;
