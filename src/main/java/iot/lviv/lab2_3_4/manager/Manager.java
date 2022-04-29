@@ -12,25 +12,25 @@ import java.util.stream.Collectors;
 
 public class Manager {
 
-    private ArrayList<Appliances> arrayList;
+    public ArrayList<Appliances> appliancesList;
 
     public List<Appliances> getList() {
-        arrayList = new ArrayList<Appliances>();
-        arrayList.add(new Computer(0));
-        arrayList.add(new Microwave(0));
-        arrayList.add(new MicrowaveUpdated(0));
-        return arrayList;
+        appliancesList = new ArrayList<Appliances>();
+        appliancesList.add(new Computer(0));
+        appliancesList.add(new Microwave(0));
+        appliancesList.add(new MicrowaveUpdated(0));
+        return appliancesList;
     }
 
     public List<Appliances> getList2() {
-        arrayList = new ArrayList<Appliances>();
-        arrayList.add(new Computer(0));
-        return arrayList;
+        appliancesList = new ArrayList<Appliances>();
+        appliancesList.add(new Computer(0));
+        return appliancesList;
     }
 
     public List<Appliances> getList3() {
-        arrayList = new ArrayList<Appliances>();
-        return arrayList;
+        appliancesList = new ArrayList<Appliances>();
+        return appliancesList;
     }
 
     public List<Appliances> sortingByPower(List<Appliances> appliances) {

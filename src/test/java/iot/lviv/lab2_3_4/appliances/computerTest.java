@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class computerTest {
-    Computer com = new Computer(0);
+    Computer computer = new Computer(0);
 
     @Test
     void powerCount() {
-        assertEquals(1200, com.powerCount());
+        assertEquals(1200, computer.powerCount());
     }
 
 }

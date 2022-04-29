@@ -6,11 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class microwaveTest {
 
-    Microwave mic = new Microwave(0);
+    Microwave microwave = new Microwave(0);
 
     @Test
     void powerCount() {
-        assertEquals(400, mic.powerCount());
+        assertEquals(400, microwave.powerCount());
     }
 
 }

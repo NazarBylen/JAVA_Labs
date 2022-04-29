@@ -15,13 +15,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 class AppliancesWriterTest {
-    AppliancesWriter wr = new AppliancesWriter();
+    AppliancesWriter writer = new AppliancesWriter();
     public static String sep = File.separator;
 
-    Manager man = new Manager();
-    List<Appliances> appliances = man.getList();
-    List<Appliances> appliances2 = man.getList2();
-    List<Appliances> appliances3 = man.getList3();
+    Manager manager = new Manager();
+    List<Appliances> appliances = manager.getList();
+    List<Appliances> appliances2 = manager.getList2();
+    List<Appliances> appliances3 = manager.getList3();
     Path path = Paths.get("src" + sep + "test" + sep + "resources" + sep + "expected.csv");
     Path path2 = Path.of("result.csv");
 
@@ -34,7 +34,7 @@ class AppliancesWriterTest {
     @Test
     void writeToFile() throws IOException {
 
-        wr.writeToFile(appliances);
+        writer.writeToFile(appliances);
 
         try (FileReader expected = new FileReader(String.valueOf(path));
              BufferedReader expectedBR = new BufferedReader(expected);
@@ -53,7 +53,7 @@ class AppliancesWriterTest {
     @Test
     void writeToFile2() throws IOException {
 
-        wr.writeToFile2(appliances2);
+        writer.writeToFile2(appliances2);
 
         try (FileReader expected = new FileReader(String.valueOf(path3));
              BufferedReader expectedBR = new BufferedReader(expected);
@@ -72,7 +72,7 @@ class AppliancesWriterTest {
     @Test
     void writeToFile3() throws IOException {
 
-        wr.writeToFile3(appliances3);
+        writer.writeToFile3(appliances3);
 
         try (FileReader expected = new FileReader(String.valueOf(path5));
              BufferedReader expectedBR = new BufferedReader(expected);
