@@ -1,17 +1,16 @@
 package iot.lviv.lab2_3_4.appliances;
 
-import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class Computer extends Appliances {
 
     public int power;
     public int volt = 40;
     public int amp = 30;
-    @Getter
     public int year = 2015;
     public int battery = 20;
     public String device = "computer";
-
 
     public Computer(int power) {
         super(0);
