@@ -1,7 +1,9 @@
 package iot.lviv.lab2_3_4.appliances;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class MicrowaveUpdated extends Microwave {
 
     public int power;
