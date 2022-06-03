@@ -4,11 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application{
+public class Application extends javax.ws.rs.core.Application {
 
     ComputerRepository cr;
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         SpringApplication.run(Application.class, args);
         System.out.println("well done");
     }

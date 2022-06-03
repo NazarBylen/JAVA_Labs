@@ -3,14 +3,12 @@ package iot.lviv.lab2_3_4.appliances;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Computer extends Appliances {
 
     @Id
@@ -107,4 +105,7 @@ public class Computer extends Appliances {
         this.device = device;
     }
 
+    public int getVolt() {
+        return volt;
+    }
 }

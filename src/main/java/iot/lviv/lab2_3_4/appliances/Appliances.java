@@ -1,12 +1,18 @@
 package iot.lviv.lab2_3_4.appliances;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@MappedSuperclass
 public abstract class Appliances {
+
     public int power;
     public int volt;
     public int amp;
