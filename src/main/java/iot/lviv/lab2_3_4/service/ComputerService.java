@@ -15,7 +15,12 @@ public class ComputerService {
     ComputerRepository compRepository;
 
     public Computer postComputer(Computer com){
-        return compRepository.save(com);
+        if (com == null){
+            throw new NullPointerException("Parameter Type cannot be null");
+        }
+        else {
+            return compRepository.save(com);
+        }
     }
 
     public Computer getComputerId(int id) {
