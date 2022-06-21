@@ -1,12 +1,16 @@
 package iot.lviv.lab2_3_4.appliances;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.MappedSuperclass;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@MappedSuperclass
 public abstract class Appliances {
+
     public int power;
     public int volt;
     public int amp;
@@ -26,11 +30,10 @@ public abstract class Appliances {
 
     public abstract String getName();
 
+    @JsonIgnore
     public String getHeaders() {
         return "power" + "," + "volt" + "," + "amp" + "," + "year" + "," + "battery";
     }
-
-    ;
 
     public String toCSV() {
         return power + "," + volt + "," + amp + "," + year;
