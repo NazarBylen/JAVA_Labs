@@ -3,34 +3,38 @@ import iot.lviv.lab2_3_4.appliances.Computer;
 import iot.lviv.lab2_3_4.service.ComputerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import javax.ws.rs.*;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.Produces;
 
 
-@Consumes("application/json")
-@Produces("MediaType.APPLICATION_JSON")
 @RequestMapping(value="/Computer")
 @RestController
+@ComponentScan("iot.lviv.lab2_3_4")
+@Produces("application/json")
+@Consumes("application/json")
 public class ComputerController{
     @Autowired
     private ComputerService service;
 
-    @RequestMapping(value = "/post")
-    public Computer postComputer(Computer computer){
-            return service.getComputer(computer);
+    @PostMapping(value="/post")
+    public Computer computer(@RequestBody Computer computer){
+        return service.postComputer(computer);
     }
 
-    @RequestMapping(value = "/get/{id}")
+    @GetMapping(value = "/get/{id}")
     public Computer getComputer(@PathVariable int id){
         return service.getComputerId(id);
     }
 
-    @RequestMapping(value = "/put/{id}")
-    public Computer putComputer(@PathVariable int id, Computer computer){
+    @PutMapping(value = "/put/{id}")
+    public ResponseEntity<Object> putComputer(@PathVariable int id, @RequestBody Computer computer){
         return service.putComputerId(id, computer);
     }
 
-    @RequestMapping(value = "/delete/{id}")
+    @DeleteMapping(value = "/delete/{id}")
     public void deleteComputer(@PathVariable int id){
         service.deleteComputerId(id);
     }

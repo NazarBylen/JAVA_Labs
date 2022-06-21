@@ -1,14 +1,12 @@
 package iot.lviv.lab2_3_4.appliances;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Computer extends Appliances {
 
     @Id
@@ -23,16 +21,22 @@ public class Computer extends Appliances {
         this.id = id;
     }
 
-    public int power;
-    public int volt = 40;
-    public int amp = 30;
-    public int year = 2015;
-    public int battery = 20;
-    public String device = "computer";
 
     public Computer(int power) {
-        super(0);
+        power = 0;
     }
+
+    public Computer(){};
+
+    public Computer(int id, int power, int amp, int volt, int year, int battery, String device){
+        this.id=id;
+        this.power=power;
+        this.amp=amp;
+        this.volt=volt;
+        this.year=year;
+        this.battery=battery;
+        this.device=device;
+    };
 
     public int powerCount() {
         int power = volt * amp;
@@ -46,9 +50,10 @@ public class Computer extends Appliances {
 
     @Override
     public int getYear() {
-        return 0;
+        return year;
     }
 
+    @JsonIgnore
     @Override
     public String getName() {
         return null;
